@@ -17,15 +17,19 @@ use Illuminate\Support\Facades\Route;
 kita ganti "get('/about',) */
 
 Route::get('/', function () {
-    return view('Home '); /*laravel akan mencari file index di resources di views */
+    return view('home '); /*laravel akan mencari file index di resources di views */
 });
 
 Route::get('/about', function () {
-    return view('About '); 
+    return view('about', [
+        "name" => "Mabertha",
+        "email"  => "mabertha.berliana@gmail.com",
+        "image" => "logounesa.jpg"
+    ]); 
 });
 
 Route::get('/blog', function () {
-    return view('Blog '); 
+    return view('blog '); 
 });
 
 
